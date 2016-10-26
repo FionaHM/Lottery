@@ -1,0 +1,64 @@
+h1 {
+	font-size: 50px;
+}
+.numbers {
+	/*float: left;*/
+	margin: 5px;
+	padding-right: 30px;
+	border-radius: 70px;
+	background-color: yellow;
+	height: 140px;
+	width: 140px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+	color: black;
+	padding-top: 50px;
+	padding-left: 25px;
+}
+#powerball{
+    margin: 5px;
+	padding-right: 30px;
+	border-radius: 70px;
+	background-color: red;
+	height: 140px;
+	width: 140px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+	color: black;
+	padding-top: 50px;
+	padding-left: 25px;
+	display: none;
+}
+.numberZone {
+	margin: 0 auto;
+}
+.container {
+	margin-top: 100px;
+	width: 100%;
+}
+#generator {
+	margin-top: 50px;
+	/*position: relative;*/
+}
+#powerball, #generator{
+	display: block;
+	margin: auto;
+}
+.wrapper-number{
+    display: block;
+    /*margin: auto;*/
+    margin: auto;
+    width: 67%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}
+.wrapper-powerball{
+    display: block;
+    margin: auto;
+    /*margin: auto;*/
+    width: 10%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<head>
+	<title>Lottery Generator</title>
+</head>
+<body>
+<div class="jumbotron text-center"><h1>Tonight's Lottery Numbers</h1></div>
+
+<div class="container">
+	<div class="row" id="numberZone">
+		<div class="col-md-12">
+			<div class="row wrapper-number">
+			 	<div id="number1" class="col-md-2 numbers"></div>
+				<div id="number2" class="col-md-2 numbers"></div> 
+				<div id="number3" class="col-md-2 numbers"></div>
+				<div id="number4" class="col-md-2 numbers"></div>
+				<div id="number5" class="col-md-2 numbers"></div>
+				<div id="number6" class="col-md-2 numbers"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row wrapper-powerball">
+		<div class="col-md-offset-4"></div>
+		<div class="col-md-4 text-center" id="powerball"></div>
+		<div class="col-md-offset-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"><button id="generator">Click Here!</button></div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+
+
+</body>
+
+<script>
+
+
+$('document').ready(function() {
+	$('#powerball').hide();
+	$('.numbers').hide();
+	$('#generator').on('click', function() {
+		var time = 5000;
+		$('.numbers').each(function() {
+			$(this).html([Math.floor(Math.random() * 10)]);
+			$('.numbers').show();
+		})
+		$('#powerball').empty();
+		$('#powerball').hide();
+		if ($('#number6').text() == '9') {
+				$('#powerball').html([Math.floor(Math.random() * 10)]);
+				$('#powerball').show();
+
+
+		}
+	});
+});
+</script>
+</html>
